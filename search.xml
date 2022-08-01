@@ -9,6 +9,36 @@
 ]]></content>
   </entry>
   <entry>
+    <title>NoiOnline2022游记</title>
+    <url>/2022/04/03/NoiOnline2022%E6%B8%B8%E8%AE%B0/</url>
+    <content><![CDATA[<p>第二次参加 Noi Online 也是2022年第一次参加 NOI 相关比赛。</p>
+<span id="more"></span>
+<p>考前几天也没有怎么刷题，板子啥的也没背，毕竟只是 Online。</p>
+<p>考试前以为先考 pj 再考 tg，仔细看了眼 noi 官网上的通知才发现错了，匆匆开了 tg 的网址。</p>
+<h2 id="提高组"><a href="#提高组" class="headerlink" title="提高组"></a>提高组</h2><p>先看的 T1，发现可以直接暴力模拟进栈出栈就行，不过这是 $O(nq)$ 的，分肯定很低。想了很久正解没想出来，就去看 T2 了。不过 T2 开始没看懂，主要是没好好看 $S_x \cap S_y \ne \varnothing \land S_x \nsubseteq S_y \land S_y \subseteq S_x$ 的意思，于是就又跑去看 T3 了。T3 很容易理解，按照题目要求暴力就可以，但是复杂度是  $O(nm^2)$  的，只能拿 10 pts。</p>
+<p>看完一轮后很犹豫，不知道是继续想正解还是直接写暴力。之后发现自己太菜了根本想不出什么正解，于是屁颠屁颠打暴力。打完 T1 和 T3交了上去。</p>
+<p>再回来看 T2，发现可以通过把每个人会的题压进一个二进制数里，然后 $n^2$ 比较每两个人的二进制数就行。可是发现题目数量是 $n$ 的，$n$ 最大为 $10^6$，就算不看复杂度，$2 ^ {10 ^6}$ 的大小就算 <code>int_128</code> 都存不下来。</p>
+<p>这时想到了一个 STL 容器—— <code>bitset</code><del>~oiwiki 上说 bitset 严格上不算 STL，不过管他呢</del>~。</p>
+<p>用 <code>bitset</code>  来存那个二进制数，并进行运算。空间可以开的下，时间复杂度是 $O(\frac{n}{w})$ ，$w = 32$(计算机位数)，大概可以拿个 40 pts。</p>
+<p>这样下来，所有题都交了个暴力。</p>
+<p>接着想着再多骗点分。看 T3 发现 $m = 2$ 这个特殊性质值得研究一下。在纸上算了一会儿发现 $m = 2$ 时 直接输出 $n \times 2 \times \sum<em>{i = 1}^m\sum</em>{j = 1}^n a_{i,j}$ 就是正确答案。</p>
+<p>最后又跑去看 T1，发现如果先预处理好就可以减去大约一个$\log$ 的复杂度，还能骗点分，但是很可惜写挂了。</p>
+<p>赛后的 pts = 15 + 30 + 20 = 65，算是正常发挥了吧。</p>
+<h2 id="入门组"><a href="#入门组" class="headerlink" title="入门组"></a>入门组</h2><p>入门组 T1 过于简单，直接按照题意模拟即可。</p>
+<p>T2 暴力肯定过不去，想到了一种相比暴力更优的解法，大概就是将 $x$ 分解因数，然后令 $d = z \div x$ 也就是 $d = x \times y \times \gcd(x,y) \div x = y \times \gcd(x,y)$。如果 $x$ 的一个因数 $x_1$ 的平方也就是 ${x_1}^2$ 是 $d$ 的一个因数，就表明这个 $x_1$ 可以是 $\gcd(x,y)$ 的因数。而为了让 $y$ 最小，需要 $\gcd(x,y)$ 最大，那就把所有满的 $x$ 的因数都为 $\gcd(x,y)$ 的因数，用 $d \div \gcd(x,y)$ 的到的就是最小的 $y$。</p>
+<p>但是这样的方法相较于正解还是慢，而且也不一定就是对的，打完之后一直在想怎么优化，连质数线性筛都乱搞出来了。不过这也导致赛后我的代码被这些乱搞覆盖找不到了。</p>
+<p>T3 原本想用记搜，可以快写完了发现自己记搜的方法有问题，比赛之间也要不够了于是就改成爆搜交上去了。</p>
+<p>赛后 pts = 100 + 45 + 35 = 180，200 都没上，不过爆搜能拿 35 分还是挺让我惊讶的。</p>
+]]></content>
+      <categories>
+        <category>游记</category>
+      </categories>
+      <tags>
+        <tag>NOIP</tag>
+        <tag>OI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSP 游记</title>
     <url>/2021/11/06/CSP%E6%B8%B8%E8%AE%B0/</url>
     <content><![CDATA[<p>我是一个 BJ 初二的小蒟蒻，系统学 OI 一年，之前稀稀拉拉的学过3年。（不过现在看来，之前学的都是一些最简单、基础的东西了）</p>
@@ -62,8 +92,8 @@
         <category>游记</category>
       </categories>
       <tags>
-        <tag>CSP</tag>
         <tag>OI</tag>
+        <tag>CSP</tag>
       </tags>
   </entry>
   <entry>
@@ -101,38 +131,8 @@
         <category>游记</category>
       </categories>
       <tags>
-        <tag>OI</tag>
         <tag>NOIP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NoiOnline2022游记</title>
-    <url>/2022/04/03/NoiOnline2022%E6%B8%B8%E8%AE%B0/</url>
-    <content><![CDATA[<p>第二次参加 Noi Online 也是2022年第一次参加 NOI 相关比赛。</p>
-<span id="more"></span>
-<p>考前几天也没有怎么刷题，板子啥的也没背，毕竟只是 Online。</p>
-<p>考试前以为先考 pj 再考 tg，仔细看了眼 noi 官网上的通知才发现错了，匆匆开了 tg 的网址。</p>
-<h2 id="提高组"><a href="#提高组" class="headerlink" title="提高组"></a>提高组</h2><p>先看的 T1，发现可以直接暴力模拟进栈出栈就行，不过这是 $O(nq)$ 的，分肯定很低。想了很久正解没想出来，就去看 T2 了。不过 T2 开始没看懂，主要是没好好看 $S_x \cap S_y \ne \varnothing \land S_x \nsubseteq S_y \land S_y \subseteq S_x$ 的意思，于是就又跑去看 T3 了。T3 很容易理解，按照题目要求暴力就可以，但是复杂度是  $O(nm^2)$  的，只能拿 10 pts。</p>
-<p>看完一轮后很犹豫，不知道是继续想正解还是直接写暴力。之后发现自己太菜了根本想不出什么正解，于是屁颠屁颠打暴力。打完 T1 和 T3交了上去。</p>
-<p>再回来看 T2，发现可以通过把每个人会的题压进一个二进制数里，然后 $n^2$ 比较每两个人的二进制数就行。可是发现题目数量是 $n$ 的，$n$ 最大为 $10^6$，就算不看复杂度，$2 ^ {10 ^6}$ 的大小就算 <code>int_128</code> 都存不下来。</p>
-<p>这时想到了一个 STL 容器—— <code>bitset</code><del>~oiwiki 上说 bitset 严格上不算 STL，不过管他呢</del>~。</p>
-<p>用 <code>bitset</code>  来存那个二进制数，并进行运算。空间可以开的下，时间复杂度是 $O(\frac{n}{w})$ ，$w = 32$(计算机位数)，大概可以拿个 40 pts。</p>
-<p>这样下来，所有题都交了个暴力。</p>
-<p>接着想着再多骗点分。看 T3 发现 $m = 2$ 这个特殊性质值得研究一下。在纸上算了一会儿发现 $m = 2$ 时 直接输出 $n \times 2 \times \sum<em>{i = 1}^m\sum</em>{j = 1}^n a_{i,j}$ 就是正确答案。</p>
-<p>最后又跑去看 T1，发现如果先预处理好就可以减去大约一个$\log$ 的复杂度，还能骗点分，但是很可惜写挂了。</p>
-<p>赛后的 pts = 15 + 30 + 20 = 65，算是正常发挥了吧。</p>
-<h2 id="入门组"><a href="#入门组" class="headerlink" title="入门组"></a>入门组</h2><p>入门组 T1 过于简单，直接按照题意模拟即可。</p>
-<p>T2 暴力肯定过不去，想到了一种相比暴力更优的解法，大概就是将 $x$ 分解因数，然后令 $d = z \div x$ 也就是 $d = x \times y \times \gcd(x,y) \div x = y \times \gcd(x,y)$。如果 $x$ 的一个因数 $x_1$ 的平方也就是 ${x_1}^2$ 是 $d$ 的一个因数，就表明这个 $x_1$ 可以是 $\gcd(x,y)$ 的因数。而为了让 $y$ 最小，需要 $\gcd(x,y)$ 最大，那就把所有满的 $x$ 的因数都为 $\gcd(x,y)$ 的因数，用 $d \div \gcd(x,y)$ 的到的就是最小的 $y$。</p>
-<p>但是这样的方法相较于正解还是慢，而且也不一定就是对的，打完之后一直在想怎么优化，连质数线性筛都乱搞出来了。不过这也导致赛后我的代码被这些乱搞覆盖找不到了。</p>
-<p>T3 原本想用记搜，可以快写完了发现自己记搜的方法有问题，比赛之间也要不够了于是就改成爆搜交上去了。</p>
-<p>赛后 pts = 100 + 45 + 35 = 180，200 都没上，不过爆搜能拿 35 分还是挺让我惊讶的。</p>
-]]></content>
-      <categories>
-        <category>游记</category>
-      </categories>
-      <tags>
         <tag>OI</tag>
-        <tag>NOIP</tag>
       </tags>
   </entry>
 </search>
