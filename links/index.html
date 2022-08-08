@@ -22,15 +22,15 @@
     var CONFIG = {"hostname":"ice641.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="欢迎各位来加友链qwq！ 1234- nickname: ice641  avatar: https:&#x2F;&#x2F;s4.ax1x.com&#x2F;2022&#x2F;02&#x2F;08&#x2F;HloutA.jpg  site: https:&#x2F;&#x2F;ice641.github.io  info: 小冰人的雪地小屋">
+  <meta name="description" content="欢迎各位互换友链qwq！ 1234- nickname: ice641  avatar: https:&#x2F;&#x2F;s4.ax1x.com&#x2F;2022&#x2F;02&#x2F;08&#x2F;HloutA.jpg  site: https:&#x2F;&#x2F;ice641.github.io  info: 小冰人的雪地小屋">
 <meta property="og:type" content="website">
 <meta property="og:title" content="友情链接">
 <meta property="og:url" content="https://ice641.github.io/links/index.html">
-<meta property="og:site_name" content="ice641的冰屋">
-<meta property="og:description" content="欢迎各位来加友链qwq！ 1234- nickname: ice641  avatar: https:&#x2F;&#x2F;s4.ax1x.com&#x2F;2022&#x2F;02&#x2F;08&#x2F;HloutA.jpg  site: https:&#x2F;&#x2F;ice641.github.io  info: 小冰人的雪地小屋">
+<meta property="og:site_name" content="ice641的雪地小屋">
+<meta property="og:description" content="欢迎各位互换友链qwq！ 1234- nickname: ice641  avatar: https:&#x2F;&#x2F;s4.ax1x.com&#x2F;2022&#x2F;02&#x2F;08&#x2F;HloutA.jpg  site: https:&#x2F;&#x2F;ice641.github.io  info: 小冰人的雪地小屋">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-08-01T13:04:27.000Z">
-<meta property="article:modified_time" content="2022-08-08T09:37:59.187Z">
+<meta property="article:modified_time" content="2022-08-08T10:55:04.293Z">
 <meta property="article:author" content="ice641">
 <meta name="twitter:card" content="summary">
 
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>友情链接 | ice641的冰屋
+  <title>友情链接 | ice641的雪地小屋
 </title>
   
 
@@ -99,7 +99,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">ice641的冰屋</h1>
+      <h1 class="site-title">ice641的雪地小屋</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
       <p class="site-subtitle" itemprop="description">OIer</p>
@@ -317,7 +317,8 @@
                 
 
             </div>
-            <p>欢迎各位来加友链qwq！</p>
+            <hr>
+<p>欢迎各位互换友链qwq！</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">nickname:</span> <span class="string">ice641</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">https://s4.ax1x.com/2022/02/08/HloutA.jpg</span></span><br><span class="line">  <span class="attr">site:</span> <span class="string">https://ice641.github.io</span></span><br><span class="line">  <span class="attr">info:</span> <span class="string">小冰人的雪地小屋</span></span><br></pre></td></tr></table></figure>
 
             </div>
@@ -600,6 +601,59 @@ window.addEventListener('pjax:success', () => {
   
 
   
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
