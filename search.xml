@@ -3,7 +3,7 @@
   <entry>
     <title>HelloWorld</title>
     <url>/posts/begin/</url>
-    <content><![CDATA[<p><code>cout &lt;&lt; &quot;Hello World!;&quot;</code></p>
+    <content><![CDATA[<p><code>cout &lt;&lt; &quot;Hello World!&quot;;</code></p>
 <span id="more"></span>
 <p>在发现几名学长都有自己的 blog 后，自己也想着搭建一个自己的 blog。于是在 <code>2022/02/10</code> ，这个 blog 便建成了。</p>
 ]]></content>

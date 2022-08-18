@@ -2208,14 +2208,14 @@ pre code {
   }
 }
 .post-body p a {
-  color: #0593d3;
+  color: #7aa2f7;
   border-bottom: none;
-  border-bottom: 1px solid #0593d3;
+  border-bottom: 1px solid #7aa2f7;
 }
 .post-body p a:hover {
-  color: #fc6423;
+  color: #f7768e;
   border-bottom: none;
-  border-bottom: 1px solid #fc6423;
+  border-bottom: 1px solid #f7768e;
 }
 .category-all-page .category-all-title {
   text-align: center;
@@ -2861,4 +2861,12 @@ mjx-container[display='true'] + br {
   .comments {
     padding: 10px 12px;
   }
+}
+code {
+  color: #7aa2f7;
+  background: #d9def5;
+  margin: 3px;
+  padding: 2px;
+  border-radius: 4px;
+  border: 1.5px solid #9aa5ce;
 }
