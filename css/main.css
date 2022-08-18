@@ -18,10 +18,10 @@
   --btn-default-hover-bg: #222;
   --btn-default-hover-color: #fff;
   --btn-default-hover-border-color: #222;
-  --highlight-background: #2e3440;
-  --highlight-foreground: #d8dee9;
-  --highlight-gutter-background: #3e4550;
-  --highlight-gutter-foreground: #c7cdd8;
+  --highlight-background: #292a44;
+  --highlight-foreground: #f1eff8;
+  --highlight-gutter-background: #3c3d56;
+  --highlight-gutter-foreground: #dddbe6;
   color-scheme: light;
 }
 html {
@@ -362,7 +362,13 @@ td {
   top: -5px;
   transform: rotate(-45deg);
 }
-pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{background:#2e3440}.hljs,.hljs-subst{color:#d8dee9}.hljs-selector-tag{color:#81a1c1}.hljs-selector-id{color:#8fbcbb;font-weight:700}.hljs-selector-attr,.hljs-selector-class{color:#8fbcbb}.hljs-property,.hljs-selector-pseudo{color:#88c0d0}.hljs-addition{background-color:rgba(163,190,140,.5)}.hljs-deletion{background-color:rgba(191,97,106,.5)}.hljs-built_in,.hljs-class,.hljs-type{color:#8fbcbb}.hljs-function,.hljs-function>.hljs-title,.hljs-title.hljs-function{color:#88c0d0}.hljs-keyword,.hljs-literal,.hljs-symbol{color:#81a1c1}.hljs-number{color:#b48ead}.hljs-regexp{color:#ebcb8b}.hljs-string{color:#a3be8c}.hljs-title{color:#8fbcbb}.hljs-params{color:#d8dee9}.hljs-bullet{color:#81a1c1}.hljs-code{color:#8fbcbb}.hljs-emphasis{font-style:italic}.hljs-formula{color:#8fbcbb}.hljs-strong{font-weight:700}.hljs-link:hover{text-decoration:underline}.hljs-comment,.hljs-quote{color:#4c566a}.hljs-doctag{color:#8fbcbb}.hljs-meta,.hljs-meta .hljs-keyword{color:#5e81ac}.hljs-meta .hljs-string{color:#a3be8c}.hljs-attr{color:#8fbcbb}.hljs-attribute{color:#d8dee9}.hljs-name{color:#81a1c1}.hljs-section{color:#88c0d0}.hljs-tag{color:#81a1c1}.hljs-template-variable,.hljs-variable{color:#d8dee9}.hljs-template-tag{color:#5e81ac}.language-abnf .hljs-attribute{color:#88c0d0}.language-abnf .hljs-symbol{color:#ebcb8b}.language-apache .hljs-attribute{color:#88c0d0}.language-apache .hljs-section{color:#81a1c1}.language-arduino .hljs-built_in{color:#88c0d0}.language-aspectj .hljs-meta{color:#d08770}.language-aspectj>.hljs-title{color:#88c0d0}.language-bnf .hljs-attribute{color:#8fbcbb}.language-clojure .hljs-name{color:#88c0d0}.language-clojure .hljs-symbol{color:#ebcb8b}.language-coq .hljs-built_in{color:#88c0d0}.language-cpp .hljs-meta .hljs-string{color:#8fbcbb}.language-css .hljs-built_in{color:#88c0d0}.language-css .hljs-keyword{color:#d08770}.language-diff .hljs-meta,.language-ebnf .hljs-attribute{color:#8fbcbb}.language-glsl .hljs-built_in{color:#88c0d0}.language-groovy .hljs-meta:not(:first-child),.language-haxe .hljs-meta,.language-java .hljs-meta{color:#d08770}.language-ldif .hljs-attribute{color:#8fbcbb}.language-lisp .hljs-name,.language-lua .hljs-built_in,.language-moonscript .hljs-built_in,.language-nginx .hljs-attribute{color:#88c0d0}.language-nginx .hljs-section{color:#5e81ac}.language-pf .hljs-built_in,.language-processing .hljs-built_in{color:#88c0d0}.language-scss .hljs-keyword,.language-stylus .hljs-keyword{color:#81a1c1}.language-swift .hljs-meta{color:#d08770}.language-vim .hljs-built_in{color:#88c0d0;font-style:italic}.language-yaml .hljs-meta{color:#d08770}
+/*!
+  Theme: Rebecca
+  Author: Victor Borja (http://github.com/vic) based on Rebecca Theme (http://github.com/vic/rebecca-theme)
+  License: ~ MIT (or more permissive) [via base16-schemes-source]
+  Maintainer: @highlightjs/core-team
+  Version: 2021.09.0
+*/pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#f1eff8;background:#292a44}.hljs ::selection,.hljs::selection{background-color:#383a62;color:#f1eff8}.hljs-comment{color:#669}.hljs-tag{color:#a0a0c5}.hljs-operator,.hljs-punctuation,.hljs-subst{color:#f1eff8}.hljs-operator{opacity:.7}.hljs-bullet,.hljs-deletion,.hljs-name,.hljs-selector-tag,.hljs-template-variable,.hljs-variable{color:#a0a0c5}.hljs-attr,.hljs-link,.hljs-literal,.hljs-number,.hljs-symbol,.hljs-variable.constant_{color:#efe4a1}.hljs-class .hljs-title,.hljs-title,.hljs-title.class_{color:#ae81ff}.hljs-strong{font-weight:700;color:#ae81ff}.hljs-addition,.hljs-code,.hljs-string,.hljs-title.class_.inherited__{color:#6dfedf}.hljs-built_in,.hljs-doctag,.hljs-keyword.hljs-atrule,.hljs-quote,.hljs-regexp{color:#8eaee0}.hljs-attribute,.hljs-function .hljs-title,.hljs-section,.hljs-title.function_,.ruby .hljs-property{color:#2de0a7}.diff .hljs-meta,.hljs-keyword,.hljs-template-tag,.hljs-type{color:#7aa5ff}.hljs-emphasis{color:#7aa5ff;font-style:italic}.hljs-meta,.hljs-meta .hljs-keyword,.hljs-meta .hljs-string{color:#ff79c6}.hljs-meta .hljs-keyword,.hljs-meta-keyword{font-weight:700}
 .highlight:hover .copy-btn,
 pre:hover .copy-btn {
   opacity: 1;
@@ -375,11 +381,29 @@ pre:hover .copy-btn {
   padding: 2px 6px;
   position: absolute;
   transition: opacity 0.2s ease-in-out;
-  background: #fff;
-  border: 0;
-  font-size: 0.8125em;
+  color: var(--highlight-foreground);
+  font-size: 14px;
   right: 0;
-  top: 0;
+  top: 2px;
+}
+figure.highlight {
+  border-radius: 5px;
+  box-shadow: 0 10px 30px 0 rgba(0,0,0,0.4);
+  padding-top: 30px;
+}
+figure.highlight .table-container {
+  border-radius: 0 0 5px 5px;
+}
+figure.highlight::before {
+  background: #fc625d;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  left: 12px;
+  margin-top: -20px;
+  position: absolute;
+  border-radius: 50%;
+  content: ' ';
+  height: 12px;
+  width: 12px;
 }
 code,
 kbd,
