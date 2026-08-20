@@ -43,4 +43,28 @@
         <tag>树状数组(Binary Index Tree)</tag>
       </tags>
   </entry>
+  <entry>
+    <title>hexo 博客恢复</title>
+    <url>/posts/47ca1ca8/</url>
+    <content><![CDATA[<p>在此记录一下这个博客在经过 4 年的长草期后重新恢复的过程。</p>
+<p>这里省去博客的云端备份环节，从换新电脑的部分开始。</p>
+<span id="more"></span>
+<h1 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h1><p>hexo 博客部署依赖于 git 和 node。</p>
+<p>git : <a href="https://git-scm.com/install/">https://git-scm.com/install/</a></p>
+<p>node : <a href="https://nodejs.org/zh-cn/download">https://nodejs.org/zh-cn/download</a></p>
+<p>安装好后按 <code>Win + R</code> 键，输入 <code>cmd</code>。弹出终端后输入 <code>git -v</code>、<code>node -v</code>和<code>npm -v</code>，如果显示版本号，那么代表环境配置完成。</p>
+<h1 id="连接远端备份仓库"><a href="#连接远端备份仓库" class="headerlink" title="连接远端备份仓库"></a>连接远端备份仓库</h1><p>在要放置博客内容的文件夹内（下用 my-blog 表示）打开 git bash，输入<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;用户名&quot;</span><br><span class="line">git config --global user.email &quot;邮箱地址&quot;</span><br></pre></td></tr></table></figure><br>来连接 github。<br>接着输入<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;邮箱地址&quot;</span><br></pre></td></tr></table></figure><br>获得一个在 C 盘用户文件夹中 <code>.ssh</code> 文件夹。里面有好几个文件，打开 <code>id_rsa.pub</code>，将里面的内容全选复制。<br>打开 github 中的设置界面，打开 SSH and GPG keys 一栏，点击 <code>new SSH key</code>，将刚刚复制的内容粘贴后点击添加即可完成本地与远端的 ssh 连接。</p>
+<h1 id="克隆备份仓库"><a href="#克隆备份仓库" class="headerlink" title="克隆备份仓库"></a>克隆备份仓库</h1><p>输入<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/用户名/my-blog.git</span><br></pre></td></tr></table></figure><br>从远端克隆博客备份。</p>
+<p>输入以下命令会下载所需要的依赖。<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure></p>
+<h1 id="博客部署"><a href="#博客部署" class="headerlink" title="博客部署"></a>博客部署</h1><p>输入以下命令安装 hexo。<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g hexo -cli</span><br></pre></td></tr></table></figure><br>安装好 hexo 后可以尝试 <code>hexo clean</code>、<code>hexo g</code>、<code>hexo s</code> 来部署博客并在本地预览。如果此时出错，有可能是备份的文件夹有损坏或者 hexo 更新后备份的博客版本低而缺少相关内容。此时可以先把克隆下来的部分移出文件夹，（在确保 <code>/my-blog</code> 文件夹中无任何文件的情况下） 尝试 <code>hexo init</code> 来获得最新的 hexo 初始化文件，并重新把备份文件复制到 <code>/my-blog</code> 中覆盖初始化的文件，并再次尝试  <code>hexo clean</code> <code>hexo g</code> <code>hexo s</code> 部署博客。</p>
+<p>如果以上任一步骤出现报错，请尝试将报错信息复制给自己信任的 AI 让其帮助分析）</p>
+<h1 id="博客的备份"><a href="#博客的备份" class="headerlink" title="博客的备份"></a>博客的备份</h1><p>在 <code>hexo d</code> 将博客部署到 github 上后输入 <code>git add .</code> <code>git commit -m &quot;更新内容&quot;</code> <code>git push</code> 来备份自己的博客。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>hexo博客</tag>
+      </tags>
+  </entry>
 </search>
