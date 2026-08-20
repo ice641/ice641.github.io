@@ -1315,7 +1315,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #eda75d;
+    background: #6086ff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2932,6 +2932,20 @@ code {
 ::-moz-selection {
   background: #c6d0f7;
   color: #111;
+}
+.post-body p a {
+  color: #0593d3;
+  border-bottom: 1px solid #0593d3;
+}
+.post-body p a:hover {
+  color: #fc6423;
+  border-bottom-color: #fc6423;
+}
+.post-body p a:visited {
+  color: #8a8a8a;
+}
+.sidebar a:hover {
+  color: #7aa2f7;
 }
 .pace {
   -webkit-pointer-events: none;
