@@ -1315,7 +1315,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #582b1a;
+    background: #eda75d;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2924,6 +2924,14 @@ code {
   padding: 2px;
   border-radius: 4px;
   border: 1.5px solid #9aa5ce;
+}
+::selection {
+  background: #c6d0f7; /* 你想要的背景色，例如青色 */
+  color: #111; /* 你想要的文字颜色，例如白色 */
+}
+::-moz-selection {
+  background: #c6d0f7;
+  color: #111;
 }
 .pace {
   -webkit-pointer-events: none;
