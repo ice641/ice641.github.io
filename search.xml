@@ -9,6 +9,24 @@
 ]]></content>
   </entry>
   <entry>
+    <title>hexo 博客常用操作</title>
+    <url>/posts/8/</url>
+    <content><![CDATA[<p>这里记录 hexo 博客的几个常用操作。</p>
+<span id="more"></span>
+<h1 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h1><p>使用 <code>hexo new &quot;文章名&quot;</code> 。随后会在 <code>/source/_posts</code> 文件夹下生成 <code>文章名.md</code> 文件。</p>
+<h1 id="博客部署"><a href="#博客部署" class="headerlink" title="博客部署"></a>博客部署</h1><p>在对博客进行修改后，先后输入 <code>hexo clean</code> <code>hexo g</code> <code>hexo s</code> 在本地部署博客并在 <code>localhost:4000</code> 中进行预览。之后可以用 <code>hexo d</code> 命令将修改后的博客部署到远端 github page 上。</p>
+<h1 id="博客备份"><a href="#博客备份" class="headerlink" title="博客备份"></a>博客备份</h1><p>部署博客后可以将文件备份到远端仓库上。<br>使用 <code>git add .</code> <code>git commit -m &quot;修改内容&quot;</code> <code>git push</code> 命令。</p>
+<h1 id="对本地文件的修改"><a href="#对本地文件的修改" class="headerlink" title="对本地文件的修改"></a>对本地文件的修改</h1><p>这里给出本地文件夹结构。<br><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">my-blog</span><br><span class="line">│  .gitignore</span><br><span class="line">│  .npmignore</span><br><span class="line">│  db.json</span><br><span class="line">│  package-lock.json</span><br><span class="line">│  package.json</span><br><span class="line">│  README</span><br><span class="line">│  README.md</span><br><span class="line">│  _config.next.yml</span><br><span class="line">│  _config.yml</span><br><span class="line">│  </span><br><span class="line">├─.deploy_git        </span><br><span class="line">├─.github</span><br><span class="line">├─node_modules      </span><br><span class="line">├─public        </span><br><span class="line">├─scaffolds</span><br><span class="line">│      </span><br><span class="line">└─source</span><br><span class="line">    ├─about</span><br><span class="line">    │      </span><br><span class="line">    ├─categories</span><br><span class="line">    │      </span><br><span class="line">    ├─images</span><br><span class="line">    │      </span><br><span class="line">    ├─links</span><br><span class="line">    │      </span><br><span class="line">    ├─tags</span><br><span class="line">    │      </span><br><span class="line">    ├─_data</span><br><span class="line">    │      </span><br><span class="line">    └─_posts            </span><br><span class="line"></span><br></pre></td></tr></table></figure><br>其中，大部分博客的修改都在 <code>/_config.yml</code> 和 <code>/_config.next.yml</code> 上进行。而 <code>/node_modules</code> 文件夹中的修改会被更新所覆盖，因此下面的修改都不会在 <code>/node_modules</code> 文件夹中进行。</p>
+<h2 id="修改黑暗模式"><a href="#修改黑暗模式" class="headerlink" title="修改黑暗模式"></a>修改黑暗模式</h2><p>黑暗模式插件的配置文件位于 <code>/node_modules/hexo-next-darkmode</code> 文件夹中，但因前文所述原因，不建议在此文件夹中进行更改。建议在 <code>/source/_data/styles.styl</code> 文件上进行更改。<br>例如：想要更改黑暗模式下单行代码块的颜色，可以在 <code>styles.styl</code> 文件中增加<br><figure class="highlight styl"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.darkmode--activated</span> <span class="selector-tag">code</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: ;<span class="comment">/* 更改字体颜色 */</span></span><br><span class="line">    <span class="attribute">background</span>: ;<span class="comment">/* 更改背景颜色 */</span></span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>对于其他想要在黑暗模式下更改的样式，也可以用 <code>.darkmode--activated</code> 后加要更改的样式进行更改。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>hexo博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>fhq-treap模板</title>
     <url>/posts/6/</url>
     <content><![CDATA[<p>fhq-treap 模板。</p>
@@ -25,7 +43,7 @@
   </entry>
   <entry>
     <title>hexo 博客恢复</title>
-    <url>/posts/47ca1ca8/</url>
+    <url>/posts/7/</url>
     <content><![CDATA[<p>在此记录一下这个博客在经过 4 年的长草期后重新恢复的过程。</p>
 <p>这里省去博客的云端备份环节，从换新电脑的部分开始。</p>
 <span id="more"></span>
